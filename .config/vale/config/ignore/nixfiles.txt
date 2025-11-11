@@ -1,0 +1,6 @@
+Nixfiles
+editorconfig
+nixos
+preconfigured
+qemu
+reprovision
