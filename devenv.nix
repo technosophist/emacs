@@ -28,6 +28,15 @@
       enable = true;
       settings.fix = true;
     };
+    elisp-indent = {
+      enable = true;
+      entry = ".pre-commit-hooks/pre-commit-elisp/hooks/elisp-indent.py";
+      excludes = [
+        "\.pre-commit-hooks/.*"
+      ];
+      files = "\.el$";
+      language = "script";
+    };
     end-of-file-fixer.enable = true;
     flake-checker = {
       enable = true;
@@ -89,6 +98,7 @@
       enable = true;
       excludes = [
         "\.config/.*"
+        "\.pre-commit-hooks/.*"
       ];
       files = ".(md|org|txt)$";
       settings.configPath = ".config/typos.toml";
@@ -96,8 +106,9 @@
     vale = {
       enable = true;
       excludes = [
-        "\.config/.*"
         "LICENSE.txt"
+        "\.config/.*"
+        "\.pre-commit-hooks/.*"
       ];
       files = ".(md|org|txt)$";
       settings.configPath = ".config/vale.ini";
